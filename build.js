@@ -13,6 +13,14 @@ const titleCase = ((str) => {
     return str.join(' ');
 })
 
+if (!fs.existsSync(path.join(__dirname, 'dist'))){
+    fs.mkdirSync(path.join(__dirname, 'dist'));
+}
+
+if (!fs.existsSync(path.join(__dirname, 'dist', 'posts'))){
+    fs.mkdirSync(path.join(__dirname, 'dist', 'posts'));
+}
+
 //i'm not using it, but here is the code you would use if you wanted to sanitize your markdown lol
 /*
 const createDOMPurify = require('dompurify');
