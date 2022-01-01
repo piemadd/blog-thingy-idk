@@ -1,0 +1,12 @@
+{
+    "name": "blog-shit",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon index.js",
+        "prod": "node index.js"
+    },
+    "author": "",
+    "license": "ISC"
+}
