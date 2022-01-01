@@ -1,15 +1,14 @@
 <html>
     <head>
+        <title>Piero's Blog</title>
         <%- include('head'); %>
     </head>
     <body>
         <h1>Piero's Blog</h1>
-        <h2 id="contents">Contents</h2>
-        <ul>
-            <li><a href="#nerd">Nerd Stuff</a></li>
-            <li><a href="#posts">Actual Posts</a></li>
-        </ul>
-        <h2 id="nerd">Nerd Stuff</h2>
-        <h2 id="posts">Actual Posts</h2>
+        <p>This is the blog of Piero Maddaleni. It is pre-rendered using ejs and then hosted on a static server (such as Vercel, Github Pages, and Cloudflare Pages). Code is available on <a href="https://github.com/piemadd">my github</a>.</p>
+        <h2 id="posts">Posts</h2>
+        <% for (let i = 0; i < posts.length; i++) { %>
+            <a href="<%- posts[i] %>"><%- postsTitleCase[i] %></a>
+        <% } %>
     </body>
 </html>
