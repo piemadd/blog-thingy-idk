@@ -5,10 +5,10 @@
     </head>
     <body>
         <h1>Piero's Blog</h1>
-        <p>This is the blog of Piero Maddaleni. It is pre-rendered using ejs and then hosted on a static server (such as Vercel, Github Pages, and Cloudflare Pages). Code is available on <a href="https://github.com/piemadd">my github</a>.</p>
+        <p>This is the blog of Piero Maddaleni. It is pre-rendered using ejs and then hosted on a static server (such as Vercel, Github Pages, and Cloudflare Pages). Code is available on <a href="https://github.com/piemadd/blog-thingy-idk">my github</a>.</p>
         <h2 id="posts">Posts</h2>
         <% for (let i = 0; i < posts.length; i++) { %>
-            <a href="<%- posts[i] %>"><%- postsTitleCase[i] %></a>
+            <a href="./posts/<%- posts[i].split('.')[0] %>.html"><%- postsTitleCase[i] %></a>
         <% } %>
     </body>
 </html>
